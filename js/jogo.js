@@ -33,6 +33,8 @@
         if (divis[i].id >= 0 && divis[i].id <= 5) {
           //alteramos a classe css das divs 0, 1 e 2 (className)
           divis[i].className = "inicial";
+          // remove imagens e volta número da carta
+          divis[i].innerHTML = divis[i].id;
         }
       }
 
@@ -93,6 +95,17 @@
         } else {//se errou a tentativa
           //altera a classe da <div> escolhida pelo jogador para a classe errou
           obj.className = "errou";
+
+          // remove imagem antiga se existir
+          obj.innerHTML = "";
+
+          // cria imagem do emoji bravo
+          const imgErro = document.createElement("img");
+
+          // usa seu emoji
+          imgErro.src = "./img/bravo.png";
+
+          obj.appendChild(imgErro);
           //armazena a div aonde Smile está escondido (getElementById)
           const objSorteado = document.getElementById(sorteado);
           //chama a funçao acertou para mostrar a div aonde está o Smile

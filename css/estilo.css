@@ -42,6 +42,7 @@
   background-color: #0f172a; /* azul escuro */
   color: #cbd5f5;
   font-family: 'Courier New', monospace;
+  padding: 15px;
   }
 
   #principal {
@@ -117,3 +118,19 @@
   .acertou img {
     transform: scale(0.9);
   }
+
+  .inicial,
+.acertou,
+.errou {
+  width: 175px;
+  height: 260px;
+  border-radius: 34px;
+
+@media (max-width: 768px) {
+  .inicial,
+  .acertou,
+  .errou {
+    width: 145px;
+    height: 280px;
+  }
+  /*colocar imagem na carta que erra*/
